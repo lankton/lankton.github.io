@@ -253,7 +253,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Android】打开后台运行或者未开启的应用]]></title>
+      <title><![CDATA[【Android】打开后台运行或者未开启的应用]]></title>
       <url>http://lankton.github.io/2016/07/09/%E3%80%90Android%E3%80%91%E6%89%93%E5%BC%80%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E6%88%96%E8%80%85%E6%9C%AA%E5%BC%80%E5%90%AF%E7%9A%84%E5%BA%94%E7%94%A8/</url>
       <content type="html"><![CDATA[<p>思考这个问题的起因是在业务中遇到这样一个场景：应用在后台或者非运行状态下的时候， 点击通知栏的相关通知，发送相应的Broadcast， 相应的receiver需要唤起应用。这里分为2种情况：</p>
 <ol>
@@ -367,7 +367,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Android】自定义控件实现可滑动的开关(switch)]]></title>
+      <title><![CDATA[【Android】自定义控件实现可滑动的开关(switch)]]></title>
       <url>http://lankton.github.io/2016/07/09/%E3%80%90Android%E3%80%91%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%8F%AF%E6%BB%91%E5%8A%A8%E7%9A%84%E5%BC%80%E5%85%B3-switch/</url>
       <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>昨天晚上写了一个Android的滑动开关， 即SlideSwitch。效果如下：<br><img src="http://img.blog.csdn.net/20150701024352476" alt="这里写图片描述"></p>
 <h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>实现的思路其实很简单，监听控件上的touch事件，并不断刷新，让滑块在手指的位置上绘出，达到滑块跟着手指滑动的显示效果。<br>先看一下代码：<br>SlideSwitch.java (7月3日有修改：在touch事件里调用onStateChangedListener前增加判空)</p>
