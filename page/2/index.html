@@ -180,6 +180,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -190,12 +200,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            关于
+            标签
           </a>
         </li>
       
@@ -210,12 +220,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            标签
+            公益404
           </a>
         </li>
       
@@ -494,8 +504,7 @@
       
         
           
-          ~转载请注明：http://blog.csdn.net/u013015161/article/details/46762991
-#实现介绍#在Android应用开发中，我们有时候需要监听到应用前后台的切换。这里提供一种思路，该思路并非原创，而是一种比较通用的办法，这里做一下介绍，附带实际过程中遇到的
+          实现介绍在Android应用开发中，我们有时候需要监听到应用前后台的切换。这里提供一种思路，该思路并非原创，而是一种比较通用的办法，这里做一下介绍，附带实际过程中遇到的问题的解决。具体实现思路是通过重写Activity的onResume方法和onStop方法实现，即在onStop里判断应用是否切换到
           ...
 
           <div class="post-more-link text-center">
@@ -629,8 +638,8 @@
       
         
           
-          ~转载请注明http://blog.csdn.net/u013015161/article/details/46921257
-#介绍#这几天，写了一个自定义照相机的demo，支持连续拍照和摄像头切换。由于自己以前没接触过相关的编程，也算是一个学习的过程，在这里做一下记录，同时也分享出来，并附上源码和
+          介绍这几天，写了一个自定义照相机的demo，支持连续拍照和摄像头切换。由于自己以前没接触过相关的编程，也算是一个学习的过程，在这里做一下记录，同时也分享出来，并附上源码和工程。效果如图：左上角switch切换摄像头，右边snap按钮进行拍照。
+一般流程Android进行拍照，需要调用摄像头类andr
           ...
 
           <div class="post-more-link text-center">
@@ -764,9 +773,8 @@
       
         
           
-          ~转载请注明来源：http://blog.csdn.net/u013015161/article/details/46704745
-#介绍#昨天晚上写了一个Android的滑动开关， 即SlideSwitch。效果如下：
-#实现#实现的思路其实很简单，监听控件上的touch事件，并不断刷新，让滑块在
+          介绍昨天晚上写了一个Android的滑动开关， 即SlideSwitch。效果如下：
+实现实现的思路其实很简单，监听控件上的touch事件，并不断刷新，让滑块在手指的位置上绘出，达到滑块跟着手指滑动的显示效果。先看一下代码：SlideSwitch.java (7月3日有修改：在touch事件里调用o
           ...
 
           <div class="post-more-link text-center">
@@ -900,8 +908,9 @@
       
         
           
-          ~转载请注明来源：http://blog.csdn.net/u013015161/article/details/46689011
-##介绍##这两天写了一个九宫格锁屏的控件，实现了九宫格锁屏的设置和解锁。该控件没有使用任何图片资源，显示的内容（包括点、圆、线等）全部由画笔绘制，所以可以自由复用。使
+          介绍这两天写了一个九宫格锁屏的控件，实现了九宫格锁屏的设置和解锁。该控件没有使用任何图片资源，显示的内容（包括点、圆、线等）全部由画笔绘制，所以可以自由复用。使用效果图：
+实现先上代码吧。自定义九宫格控件：LocusPassView
+123456789101112131415161718192021
           ...
 
           <div class="post-more-link text-center">
@@ -1035,8 +1044,7 @@
       
         
           
-          ~转载请注明：http://blog.csdn.net/u013015161/article/details/46640273 
-介绍最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：1、移动、缩放图片2、双击快速放大或缩小图片3、单击退出浏览4、左右滑动切
+          介绍最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：1、移动、缩放图片2、双击快速放大或缩小图片3、单击退出浏览4、左右滑动切换图片。目前还只实现了展示SD卡里图片的功能，后续应该补完，使其可以展示网络图片等。代码已经在Github上开源， 地址为：htt
           ...
 
           <div class="post-more-link text-center">

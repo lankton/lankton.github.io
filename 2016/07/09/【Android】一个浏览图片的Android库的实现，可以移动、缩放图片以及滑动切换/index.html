@@ -84,21 +84,24 @@
 
 
 
-<meta name="description" content="~转载请注明：http://blog.csdn.net/u013015161/article/details/46640273 
-介绍最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：1、移动、缩放图片2、双击快速放大或缩小图片3、单击退出浏览4、左右滑动切换图片。目前还只实现了展示SD卡里图片的功能，后续应该补完，使其可以展示网络图片等。代码已经在Git">
+<meta name="description" content="介绍最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：1、移动、缩放图片2、双击快速放大或缩小图片3、单击退出浏览4、左右滑动切换图片。目前还只实现了展示SD卡里图片的功能，后续应该补完，使其可以展示网络图片等。代码已经在Github上开源， 地址为：https://github.com/lankton/lanimagebrowser
+展示：图片切换
+图片">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Android】一个浏览图片的Android库的实现，可以移动、缩放图片以及滑动切换">
 <meta property="og:url" content="http://lankton.github.io/2016/07/09/【Android】一个浏览图片的Android库的实现，可以移动、缩放图片以及滑动切换/index.html">
 <meta property="og:site_name" content="Lan‘s blog">
-<meta property="og:description" content="~转载请注明：http://blog.csdn.net/u013015161/article/details/46640273 
-介绍最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：1、移动、缩放图片2、双击快速放大或缩小图片3、单击退出浏览4、左右滑动切换图片。目前还只实现了展示SD卡里图片的功能，后续应该补完，使其可以展示网络图片等。代码已经在Git">
+<meta property="og:description" content="介绍最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：1、移动、缩放图片2、双击快速放大或缩小图片3、单击退出浏览4、左右滑动切换图片。目前还只实现了展示SD卡里图片的功能，后续应该补完，使其可以展示网络图片等。代码已经在Github上开源， 地址为：https://github.com/lankton/lanimagebrowser
+展示：图片切换
+图片">
 <meta property="og:image" content="http://img.blog.csdn.net/20150625192840175">
 <meta property="og:image" content="http://img.blog.csdn.net/20150625193024601">
-<meta property="og:updated_time" content="2016-07-09T13:29:04.000Z">
+<meta property="og:updated_time" content="2016-07-09T15:13:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Android】一个浏览图片的Android库的实现，可以移动、缩放图片以及滑动切换">
-<meta name="twitter:description" content="~转载请注明：http://blog.csdn.net/u013015161/article/details/46640273 
-介绍最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：1、移动、缩放图片2、双击快速放大或缩小图片3、单击退出浏览4、左右滑动切换图片。目前还只实现了展示SD卡里图片的功能，后续应该补完，使其可以展示网络图片等。代码已经在Git">
+<meta name="twitter:description" content="介绍最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：1、移动、缩放图片2、双击快速放大或缩小图片3、单击退出浏览4、左右滑动切换图片。目前还只实现了展示SD卡里图片的功能，后续应该补完，使其可以展示网络图片等。代码已经在Github上开源， 地址为：https://github.com/lankton/lanimagebrowser
+展示：图片切换
+图片">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20150625192840175">
 
 
@@ -185,6 +188,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -195,12 +208,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            关于
+            标签
           </a>
         </li>
       
@@ -215,12 +228,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            标签
+            公益404
           </a>
         </li>
       
@@ -360,8 +373,7 @@
       
 
       
-        <p>~转载请注明：<a href="http://blog.csdn.net/u013015161/article/details/46640273" target="_blank" rel="external">http://blog.csdn.net/u013015161/article/details/46640273</a> </p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：<br>1、移动、缩放图片<br>2、双击快速放大或缩小图片<br>3、单击退出浏览<br>4、左右滑动切换图片。<br>目前还只实现了展示SD卡里图片的功能，后续应该补完，使其可以展示网络图片等。<br>代码已经在Github上开源， 地址为：<br><a href="https://github.com/lankton/lanimagebrowser" target="_blank" rel="external">https://github.com/lankton/lanimagebrowser</a></p>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>最近写了一个Library， 用于实现在Android设备上对大图的浏览。已经实现的功能有：<br>1、移动、缩放图片<br>2、双击快速放大或缩小图片<br>3、单击退出浏览<br>4、左右滑动切换图片。<br>目前还只实现了展示SD卡里图片的功能，后续应该补完，使其可以展示网络图片等。<br>代码已经在Github上开源， 地址为：<br><a href="https://github.com/lankton/lanimagebrowser" target="_blank" rel="external">https://github.com/lankton/lanimagebrowser</a></p>
 <p>展示：<br>图片切换<br><img src="http://img.blog.csdn.net/20150625192840175" width="200px"></p>
 <p>图片缩放<br><img src="http://img.blog.csdn.net/20150625193024601" width="200px"></p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>实现的思路很简单。图片的缩放、移动等操作通过自定义ImageView实现，这些自定义ImageView通过Fragment来展现。同时，这些Fragment被绑定到ViewPager上，从而实现对图片的切换。下面简单讲一下几个比较关键的地方。</p>
@@ -380,7 +392,8 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.lankton.imagebrowser;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.List;</div><div class="line"></div><div class="line"><span class="keyword">import</span> android.graphics.Bitmap;</div><div class="line"><span class="keyword">import</span> android.support.v4.app.Fragment;</div><div class="line"><span class="keyword">import</span> android.support.v4.app.FragmentManager;</div><div class="line"><span class="keyword">import</span> android.support.v4.app.FragmentPagerAdapter;</div><div class="line"><span class="keyword">import</span> android.support.v4.util.LruCache;</div><div class="line"><span class="keyword">import</span> android.util.Log;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IPagerAdapter</span> <span class="keyword">extends</span> <span class="title">FragmentPagerAdapter</span></span>&#123;</div><div class="line">    List&lt;String&gt; pathList;</div><div class="line">    LruCache&lt;String, Bitmap&gt; cache;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">IPagerAdapter</span><span class="params">(FragmentManager fm, List&lt;String&gt; pathList)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(fm);</div><div class="line">        <span class="keyword">this</span>.pathList = pathList;</div><div class="line">        </div><div class="line">        <span class="comment">/*init LruCache*/</span></div><div class="line">        <span class="keyword">final</span> <span class="keyword">int</span> maxMemory = (<span class="keyword">int</span>) (Runtime.getRuntime().maxMemory() / <span class="number">1024</span>);Log.v(<span class="string">"diskcache"</span>,<span class="string">"mem : "</span> + maxMemory);</div><div class="line">        <span class="keyword">final</span> <span class="keyword">int</span> cacheSize = <span class="number">1</span> * <span class="number">1024</span> * <span class="number">1024</span>;<span class="comment">//maxMemory / 8;</span></div><div class="line">        cache = <span class="keyword">new</span> LruCache&lt;String, Bitmap&gt;(cacheSize);</div><div class="line">        <span class="comment">// TODO Auto-generated constructor stub</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Fragment <span class="title">getItem</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">        <span class="comment">// TODO Auto-generated method stub</span></div><div class="line">        IFragment f = <span class="keyword">new</span> IFragment(pathList.get(position),position, cache);</div><div class="line">        <span class="keyword">return</span> f;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// TODO Auto-generated method stub</span></div><div class="line">        <span class="keyword">return</span> pathList.size();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>在之前介绍Fragment的代码里可以看到如何使用LruCache的，不再赘述了。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>本Library主要提供了一个PagerAdapter。使用时，让该工程作为Library被需要的工程引用即可。<br>使用时的代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        // TODO Auto-generated method stub</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        this.setContentView(R.layout.lanactivity_browserimage);</div><div class="line">        viewPager = (ViewPager) this.findViewById(R.id.viewpager);</div><div class="line">        </div><div class="line">        </div><div class="line">        </div><div class="line">        photos = this.getIntent().getStringArrayListExtra(&quot;photoList&quot;);</div><div class="line">        index = this.getIntent().getIntExtra(&quot;index&quot;, 0);</div><div class="line">        </div><div class="line">        adapter = new IPagerAdapter(this.getSupportFragmentManager(), photos);</div><div class="line">        viewPager.setAdapter(adapter);</div><div class="line">        viewPager.setCurrentItem(index);</div><div class="line">        </div><div class="line">        </div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>本Library主要提供了一个PagerAdapter。使用时，让该工程作为Library被需要的工程引用即可。<br>使用时的代码如下： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        // TODO Auto-generated method stub</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        this.setContentView(R.layout.lanactivity_browserimage);</div><div class="line">        viewPager = (ViewPager) this.findViewById(R.id.viewpager);</div><div class="line">        </div><div class="line">        </div><div class="line">        </div><div class="line">        photos = this.getIntent().getStringArrayListExtra(&quot;photoList&quot;);</div><div class="line">        index = this.getIntent().getIntExtra(&quot;index&quot;, 0);</div><div class="line">        </div><div class="line">        adapter = new IPagerAdapter(this.getSupportFragmentManager(), photos);</div><div class="line">        viewPager.setAdapter(adapter);</div><div class="line">        viewPager.setCurrentItem(index);</div><div class="line">        </div><div class="line">        </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>在你的布局文件里放置一个普通的ViewPager，然后使用类库提供的IPagerAdapter即可。需要传进Adapter的参数，即photos，是你本地文件的路径列表。之后该Activity就可以拿来进行图片浏览了。</p>
 <p>就先介绍到这里吧， 这个Library目前还有不少需要改进和提升的地方，请多多指教。</p>
 <p>最后在申明一次开源地址， 代码都可以从这里获取：<br><a href="https://github.com/lankton/lanimagebrowser" target="_blank" rel="external">https://github.com/lankton/lanimagebrowser</a></p>

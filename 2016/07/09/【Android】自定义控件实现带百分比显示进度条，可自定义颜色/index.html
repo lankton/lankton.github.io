@@ -84,39 +84,39 @@
 
 
 
-<meta name="description" content="#介绍#前天做了一个带百分比显示的条形进度条，效果如下：
-#实现#这个自定义进度条， 看起来简单， 做起来。。。其实也很简单： 主要通过继承View类， 并重写其onDraw方法实现。思路分为3步：
+<meta name="description" content="介绍前天做了一个带百分比显示的条形进度条，效果如下：
+实现这个自定义进度条， 看起来简单， 做起来。。。其实也很简单： 主要通过继承View类， 并重写其onDraw方法实现。思路分为3步：
 
 画进图条背景(图中灰色部分
 根据进度画出进度条(图中绿色部分
 绘制进度百分比(图中白色文本
 
-前面2个步骤非常简单， 通过drawRoundRect方法进行绘制即可， 第3步也不难， 重点在于定位好">
+前面2个步骤非常简单， 通过drawRoundRect方法进行绘制即可， 第3步也不难， 重点在于定位好绘制文本">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Android】自定义控件实现带百分比显示进度条，可自定义颜色">
 <meta property="og:url" content="http://lankton.github.io/2016/07/09/【Android】自定义控件实现带百分比显示进度条，可自定义颜色/index.html">
 <meta property="og:site_name" content="Lan‘s blog">
-<meta property="og:description" content="#介绍#前天做了一个带百分比显示的条形进度条，效果如下：
-#实现#这个自定义进度条， 看起来简单， 做起来。。。其实也很简单： 主要通过继承View类， 并重写其onDraw方法实现。思路分为3步：
+<meta property="og:description" content="介绍前天做了一个带百分比显示的条形进度条，效果如下：
+实现这个自定义进度条， 看起来简单， 做起来。。。其实也很简单： 主要通过继承View类， 并重写其onDraw方法实现。思路分为3步：
 
 画进图条背景(图中灰色部分
 根据进度画出进度条(图中绿色部分
 绘制进度百分比(图中白色文本
 
-前面2个步骤非常简单， 通过drawRoundRect方法进行绘制即可， 第3步也不难， 重点在于定位好">
+前面2个步骤非常简单， 通过drawRoundRect方法进行绘制即可， 第3步也不难， 重点在于定位好绘制文本">
 <meta property="og:image" content="http://img.blog.csdn.net/20160110180326105">
 <meta property="og:image" content="http://xyczero.qiniudn.com/Bolg_%E5%A6%82%E4%BD%95%E2%80%9C%E4%BB%BB%E6%80%A7%E2%80%9D%E4%BD%BF%E7%94%A8Android%E7%9A%84drawText%28%29_base.png">
-<meta property="og:updated_time" content="2016-07-09T14:06:25.000Z">
+<meta property="og:updated_time" content="2016-07-09T15:15:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Android】自定义控件实现带百分比显示进度条，可自定义颜色">
-<meta name="twitter:description" content="#介绍#前天做了一个带百分比显示的条形进度条，效果如下：
-#实现#这个自定义进度条， 看起来简单， 做起来。。。其实也很简单： 主要通过继承View类， 并重写其onDraw方法实现。思路分为3步：
+<meta name="twitter:description" content="介绍前天做了一个带百分比显示的条形进度条，效果如下：
+实现这个自定义进度条， 看起来简单， 做起来。。。其实也很简单： 主要通过继承View类， 并重写其onDraw方法实现。思路分为3步：
 
 画进图条背景(图中灰色部分
 根据进度画出进度条(图中绿色部分
 绘制进度百分比(图中白色文本
 
-前面2个步骤非常简单， 通过drawRoundRect方法进行绘制即可， 第3步也不难， 重点在于定位好">
+前面2个步骤非常简单， 通过drawRoundRect方法进行绘制即可， 第3步也不难， 重点在于定位好绘制文本">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20160110180326105">
 
 
@@ -203,6 +203,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -213,12 +223,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            关于
+            标签
           </a>
         </li>
       
@@ -233,12 +243,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            标签
+            公益404
           </a>
         </li>
       
@@ -378,8 +388,8 @@
       
 
       
-        <p>#介绍#<br>前天做了一个带百分比显示的条形进度条，效果如下：<br><img src="http://img.blog.csdn.net/20160110180326105" alt="这里写图片描述"></p>
-<p>#实现#<br>这个自定义进度条， 看起来简单， 做起来。。。其实也很简单： 主要通过继承View类， 并重写其onDraw方法实现。<br>思路分为3步：</p>
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>前天做了一个带百分比显示的条形进度条，效果如下：<br><img src="http://img.blog.csdn.net/20160110180326105" alt="这里写图片描述"></p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>这个自定义进度条， 看起来简单， 做起来。。。其实也很简单： 主要通过继承View类， 并重写其onDraw方法实现。<br>思路分为3步：</p>
 <ol>
 <li>画进图条背景(图中灰色部分</li>
 <li>根据进度画出进度条(图中绿色部分</li>
@@ -613,7 +623,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a></li></ol></div>
             
           </div>
         </section>

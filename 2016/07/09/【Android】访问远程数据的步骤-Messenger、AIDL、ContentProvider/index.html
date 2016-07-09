@@ -85,24 +85,21 @@
 
 
 <meta name="description" content="阅读书籍：《Android开发艺术探索》作者：任玉刚本文为阅读其中IPC相关章节所做的简单总结，相关示例代码来自于书中。
-#IPC相关#
-##Messenger##1.远程service 创建Messenger对象: mMessenger，并通过onBind方法提供IBinder对象; 
-123456789101112private static class MessengerHandler ex">
+IPC相关Messenger1.远程service 创建Messenger对象: mMessenger，并通过onBind方法提供IBinder对象; 
+123456789101112private static class MessengerHandler extends H">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Android】访问远程数据的步骤(Messenger、AIDL、ContentProvider">
 <meta property="og:url" content="http://lankton.github.io/2016/07/09/【Android】访问远程数据的步骤-Messenger、AIDL、ContentProvider/index.html">
 <meta property="og:site_name" content="Lan‘s blog">
 <meta property="og:description" content="阅读书籍：《Android开发艺术探索》作者：任玉刚本文为阅读其中IPC相关章节所做的简单总结，相关示例代码来自于书中。
-#IPC相关#
-##Messenger##1.远程service 创建Messenger对象: mMessenger，并通过onBind方法提供IBinder对象; 
-123456789101112private static class MessengerHandler ex">
-<meta property="og:updated_time" content="2016-07-09T14:16:52.000Z">
+IPC相关Messenger1.远程service 创建Messenger对象: mMessenger，并通过onBind方法提供IBinder对象; 
+123456789101112private static class MessengerHandler extends H">
+<meta property="og:updated_time" content="2016-07-09T15:22:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Android】访问远程数据的步骤(Messenger、AIDL、ContentProvider">
 <meta name="twitter:description" content="阅读书籍：《Android开发艺术探索》作者：任玉刚本文为阅读其中IPC相关章节所做的简单总结，相关示例代码来自于书中。
-#IPC相关#
-##Messenger##1.远程service 创建Messenger对象: mMessenger，并通过onBind方法提供IBinder对象; 
-123456789101112private static class MessengerHandler ex">
+IPC相关Messenger1.远程service 创建Messenger对象: mMessenger，并通过onBind方法提供IBinder对象; 
+123456789101112private static class MessengerHandler extends H">
 
 
 
@@ -188,6 +185,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -198,12 +205,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            关于
+            标签
           </a>
         </li>
       
@@ -218,12 +225,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            标签
+            公益404
           </a>
         </li>
       
@@ -364,14 +371,12 @@
 
       
         <p><strong>阅读书籍：《Android开发艺术探索》</strong><br><strong>作者：任玉刚</strong><br><strong>本文为阅读其中IPC相关章节所做的简单总结，相关示例代码来自于书中。</strong></p>
-<p>#IPC相关#</p>
-<p>##Messenger##<br>1.远程service 创建Messenger对象: mMessenger，并通过onBind方法提供IBinder对象; </p>
+<h1 id="IPC相关"><a href="#IPC相关" class="headerlink" title="IPC相关"></a>IPC相关</h1><h2 id="Messenger"><a href="#Messenger" class="headerlink" title="Messenger"></a>Messenger</h2><p>1.远程service 创建Messenger对象: mMessenger，并通过onBind方法提供IBinder对象; </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MessengerHandler</span> <span class="keyword">extends</span> <span class="title">Handler</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.handleMessage(msg);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">private</span> <span class="keyword">final</span> Messenger mMessenger = <span class="keyword">new</span> Messenger(<span class="keyword">new</span> MessengerHandler());</div><div class="line"><span class="meta">@Nullable</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> IBinder <span class="title">onBind</span><span class="params">(Intent intent)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> mMessenger.getBinder();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>2.client 绑定远程 service，通过ServiceConnection对象获得IBinder对象， 再通过该IBinder对象获得Messenger对象1:cm1;</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> ServiceConnection mConnection = <span class="keyword">new</span> ServiceConnection() &#123;</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onServiceConnected</span><span class="params">(ComponentName name, IBinder service)</span> </span>&#123;</div><div class="line">            mService = <span class="keyword">new</span> Messenger(service);</div><div class="line">            Message msg = Message.obtain();</div><div class="line">            msg.what = <span class="number">99</span>;</div><div class="line">            Bundle data = <span class="keyword">new</span> Bundle();</div><div class="line">            data.putString(<span class="string">"msg"</span>, <span class="string">"hello, this is client"</span>);</div><div class="line">            msg.setData(data);</div><div class="line">            msg.replyTo = mGetReplyMessenger;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                mService.send(msg);</div><div class="line">            &#125; <span class="keyword">catch</span> (RemoteException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onServiceDisconnected</span><span class="params">(ComponentName name)</span> </span>&#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
 <p>3.同时要用Handler创建一个新的Messenger对象，cm2，用来处理远程service返回的消息。用msg.replyTo = cm2 进行设置。之后通过cm1.send(msg)向远程service发送消息。远程service中的sm1接受消息并且处理。<br>3.sm1中Handler对象处理消息时， 可以通过msg.replyTo获取要回复的Messenger对象。使用msg.replyTo.send(msg), 即可在客户端Messenger对象cm2 的handler中进行消息的处理。</p>
-<p>##AIDL##</p>
-<ol>
+<h2 id="AIDL"><a href="#AIDL" class="headerlink" title="AIDL"></a>AIDL</h2><ol>
 <li>创建 Bean， 实现Parcelable接口；</li>
 <li>创建 Manager AIDL文件， 如果用到上述 Bean， 需要建立 Bean.AIDL， 并申明那个类为parcelable</li>
 </ol>
@@ -387,7 +392,7 @@
 <li>client 创建ServiceConnection， 并进行bindService，通过onServiceConnected获得IBinder对象，并通过asInterface方法获得远程service中的IBookManager对象，即可对远程service的数据进行操作。</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> ServiceConnection mConnection = <span class="keyword">new</span> ServiceConnection() &#123;</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onServiceConnected</span><span class="params">(ComponentName name, IBinder service)</span> </span>&#123;</div><div class="line">            IBookManager bookManager = IBookManager.Stub.asInterface(service);</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                List&lt;Book&gt; list = bookManager.getBookList();</div><div class="line">                Log.i(<span class="string">"AIDLDemo"</span>, <span class="string">"query book list, list type: "</span> + list.getClass().getCanonicalName());</div><div class="line">                Log.i(<span class="string">"AIDLDemo"</span>, <span class="string">"query book list: "</span> + list.toString());</div><div class="line">                Book book = <span class="keyword">new</span> Book(<span class="number">3</span>, <span class="string">"swift"</span>);</div><div class="line">                bookManager.addBook(book);</div><div class="line">                List&lt;Book&gt; newList = bookManager.getBookList();</div><div class="line">                Log.i(<span class="string">"AIDLDemo"</span>, <span class="string">"after add book, list: "</span> + newList.toString());</div><div class="line">            &#125; <span class="keyword">catch</span> (RemoteException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onServiceDisconnected</span><span class="params">(ComponentName name)</span> </span>&#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        Intent intent = <span class="keyword">new</span> Intent(<span class="keyword">this</span>, BookManagerService.class);</div><div class="line">        bindService(intent, mConnection, BIND_AUTO_CREATE);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>##ContentProvider##<br>一个提供跨进程访问数据的解决方案。  </p>
+<h2 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h2><p>一个提供跨进程访问数据的解决方案。  </p>
 <ol>
 <li>建立远端ContentProvider， 并在manifest中申明authority和name;  <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">provider</span></span></div><div class="line">            <span class="attr">android:authorities</span>=<span class="string">"cn.lankton.contentproviderdemo.book.provider"</span></div><div class="line">            <span class="attr">android:name</span>=<span class="string">".BookProvider"</span></div><div class="line">            <span class="attr">android:process</span>=<span class="string">":provider"</span>/&gt;</div></pre></td></tr></table></figure>
 </li>
@@ -621,7 +626,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IPC相关"><span class="nav-number">1.</span> <span class="nav-text">IPC相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Messenger"><span class="nav-number">1.1.</span> <span class="nav-text">Messenger</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AIDL"><span class="nav-number">1.2.</span> <span class="nav-text">AIDL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ContentProvider"><span class="nav-number">1.3.</span> <span class="nav-text">ContentProvider</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
