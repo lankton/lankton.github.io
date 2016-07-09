@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -84,15 +84,34 @@
 
 
 
-<meta name="description" content="少年你死了">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lan‘s blog">
-<meta property="og:url" content="http://lankton.github.io/archives/2016/07/index.html">
+<meta name="description" content="思考这个问题的起因是在业务中遇到这样一个场景：应用在后台或者非运行状态下的时候， 点击通知栏的相关通知，发送相应的Broadcast， 相应的receiver需要唤起应用。这里分为2种情况：
+
+应用运行在后台， 则打开应用后， 界面保持为应用最后展示的界面。
+应用未开启，则重新启动。 
+
+在网上没有找到合适的解决方案， 自己的解决方案参看以下代码：
+123456789101112131415161">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android】打开后台运行或者未开启的应用">
+<meta property="og:url" content="http://lankton.github.io/2016/07/09/【Android】打开后台运行或者未开启的应用/index.html">
 <meta property="og:site_name" content="Lan‘s blog">
-<meta property="og:description" content="少年你死了">
+<meta property="og:description" content="思考这个问题的起因是在业务中遇到这样一个场景：应用在后台或者非运行状态下的时候， 点击通知栏的相关通知，发送相应的Broadcast， 相应的receiver需要唤起应用。这里分为2种情况：
+
+应用运行在后台， 则打开应用后， 界面保持为应用最后展示的界面。
+应用未开启，则重新启动。 
+
+在网上没有找到合适的解决方案， 自己的解决方案参看以下代码：
+123456789101112131415161">
+<meta property="og:updated_time" content="2016-07-09T13:54:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lan‘s blog">
-<meta name="twitter:description" content="少年你死了">
+<meta name="twitter:title" content="Android】打开后台运行或者未开启的应用">
+<meta name="twitter:description" content="思考这个问题的起因是在业务中遇到这样一个场景：应用在后台或者非运行状态下的时候， 点击通知栏的相关通知，发送相应的Broadcast， 相应的receiver需要唤起应用。这里分为2种情况：
+
+应用运行在后台， 则打开应用后， 界面保持为应用最后展示的界面。
+应用未开启，则重新启动。 
+
+在网上没有找到合适的解决方案， 自己的解决方案参看以下代码：
+123456789101112131415161">
 
 
 
@@ -113,9 +132,9 @@
 
 
 
-  <link rel="canonical" href="http://lankton.github.io/archives/2016/07/"/>
+  <link rel="canonical" href="http://lankton.github.io/2016/07/09/【Android】打开后台运行或者未开启的应用/"/>
 
-  <title> 归档 | Lan‘s blog </title>
+  <title> Android】打开后台运行或者未开启的应用 | Lan‘s blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +155,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,410 +276,227 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 16 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【Android】自定义LinearLayout实现侧滑布局-SwipeLinearLayout/" itemprop="url">
-              
-                <span itemprop="name">【Android】自定义LinearLayout实现侧滑布局--SwipeLinearLayout</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T22:21:42+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【Android】自定义FlowLayout，支持多种布局优化-android-flowlayout/" itemprop="url">
-              
-                <span itemprop="name">【Android】自定义FlowLayout，支持多种布局优化--android-flowlayout</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T22:11:58+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【Android】结合源码解析Android消息队列工作流程/" itemprop="url">
-              
-                <span itemprop="name">【Android】结合源码解析Android消息队列工作流程</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T22:11:29+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【Android】访问远程数据的步骤-Messenger、AIDL、ContentProvider/" itemprop="url">
-              
-                <span itemprop="name">【Android】访问远程数据的步骤(Messenger、AIDL、ContentProvider</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T22:11:09+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【Android】软引用-SoftReference-与LruCache/" itemprop="url">
-              
-                <span itemprop="name">【Android】软引用(SoftReference)与LruCache</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T22:04:22+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【Android】0行代码实现任意形状图片展示-android-anyshape/" itemprop="url">
-              
-                <span itemprop="name">【Android】0行代码实现任意形状图片展示--android-anyshape</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T22:01:58+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【Android】自定义控件实现带百分比显示进度条，可自定义颜色/" itemprop="url">
-              
-                <span itemprop="name">【Android】自定义控件实现带百分比显示进度条，可自定义颜色</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T21:59:41+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【Android】打开后台运行或者未开启的应用/" itemprop="url">
-              
-                <span itemprop="name">Android】打开后台运行或者未开启的应用</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T21:48:12+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【Android】TextView-显示超链接的几种方法/" itemprop="url">
-              
-                <span itemprop="name">【Android】TextView 显示超链接的几种方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T21:47:53+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/09/【ghost】centos使用nginx实现ghost博客系统的反向代理/" itemprop="url">
-              
-                <span itemprop="name">【nginx】centos使用nginx实现ghost博客系统的反向代理</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-09T21:47:22+08:00"
-              content="2016-07-09" >
-          07-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2016/07/page/2/">2</a><a class="extend next" rel="next" href="/archives/2016/07/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android】打开后台运行或者未开启的应用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-09T21:48:12+08:00" content="2016-07-09">
+              2016-07-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Lan-s-tech/" itemprop="url" rel="index">
+                    <span itemprop="name">Lan's tech</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/09/【Android】打开后台运行或者未开启的应用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/09/【Android】打开后台运行或者未开启的应用/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/09/【Android】打开后台运行或者未开启的应用/" class="leancloud_visitors" data-flag-title="Android】打开后台运行或者未开启的应用">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
 
 
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>思考这个问题的起因是在业务中遇到这样一个场景：应用在后台或者非运行状态下的时候， 点击通知栏的相关通知，发送相应的Broadcast， 相应的receiver需要唤起应用。这里分为2种情况：</p>
+<ol>
+<li>应用运行在后台， 则打开应用后， 界面保持为应用最后展示的界面。</li>
+<li>应用未开启，则重新启动。 </li>
+</ol>
+<p>在网上没有找到合适的解决方案， 自己的解决方案参看以下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 打开应用. 应用在前台不处理,在后台就直接在前台展示当前界面, 未开启则重新启动</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">openApplicationFromBackground</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">    Intent intent;</div><div class="line">    ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);</div><div class="line">    List&lt;ActivityManager.RunningTaskInfo&gt; list = am.getRunningTasks(<span class="number">100</span>);</div><div class="line">    <span class="keyword">if</span> (!list.isEmpty() &amp;&amp; list.get(<span class="number">0</span>).topActivity.getPackageName().equals(context.getPackageName())) &#123;</div><div class="line">        <span class="comment">//此时应用正在前台, 不作处理</span></div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (ActivityManager.RunningTaskInfo info : list) &#123;</div><div class="line">        <span class="keyword">if</span> (info.topActivity.getPackageName().equals(context.getPackageName())) &#123;</div><div class="line">            intent = <span class="keyword">new</span> Intent();</div><div class="line">            intent.setComponent(info.topActivity);</div><div class="line">            intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);</div><div class="line">            <span class="keyword">if</span> (! (context <span class="keyword">instanceof</span> Activity)) &#123;</div><div class="line">                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</div><div class="line">            &#125;</div><div class="line">            context.startActivity(intent);</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    intent = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());</div><div class="line">    context.startActivity(intent);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>思路比较简单：</p>
+<ol>
+<li>获取当前正在运行的任务栈，取最多100个(应该已经足够):<br><code>List&lt;ActivityManager.RunningTaskInfo&gt; list = am.getRunningTasks(100);</code></li>
+<li>通过第1个任务栈判断应用是否在前台。如果是， 直接返回不做任何处理；</li>
+<li>遍历这100个任务栈的顶层Activity， 判断包名与本应用是否一致。如果一致， 直接通过跳转打开。 同时需要设置FLag      :FLAG_ACTIVITY_SINGLE_TOP  ，避免重复打开topActivity。如果遍历之后没有发现一致， 可以视作应用未打开， 进行第4步操作;</li>
+<li>没有在运行任务栈里找到当前应用，直接通过包名启动应用：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">intent = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());</div><div class="line">        context.startActivity(intent);</div></pre></td></tr></table></figure>
+<p>经过检验， 达到了目标效果。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag">#Android</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/09/【Android】TextView-显示超链接的几种方法/" rel="next" title="【Android】TextView 显示超链接的几种方法">
+                <i class="fa fa-chevron-left"></i> 【Android】TextView 显示超链接的几种方法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/09/【Android】自定义控件实现带百分比显示进度条，可自定义颜色/" rel="prev" title="【Android】自定义控件实现带百分比显示进度条，可自定义颜色">
+                【Android】自定义控件实现带百分比显示进度条，可自定义颜色 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/07/09/【Android】打开后台运行或者未开启的应用/"
+     data-title="Android】打开后台运行或者未开启的应用"
+     data-content=""
+     data-url="http://lankton.github.io/2016/07/09/【Android】打开后台运行或者未开启的应用/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/09/【Android】打开后台运行或者未开启的应用/"
+           data-title="Android】打开后台运行或者未开启的应用" data-url="http://lankton.github.io/2016/07/09/【Android】打开后台运行或者未开启的应用/">
+      <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+      <script type="text/javascript">
+      var duoshuoQuery = {short_name:"lan-github-page"};
+        (function() {
+          var ds = document.createElement('script');
+          ds.type = 'text/javascript';ds.async = true;
+          ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+          ds.charset = 'UTF-8';
+          (document.getElementsByTagName('head')[0] 
+           || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script>
+      <!-- 多说公共JS代码 end -->
+
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -680,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://github.com/lankton/my_pictures/blob/master/site/header_limbo.jpg?raw=true"
@@ -751,6 +596,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -854,11 +710,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
